@@ -3,8 +3,9 @@
     var elevator = elevators[0];
 
     elevator.on("idle", function() {
-      elevator.goToFloor(0);
-      elevator.goToFloor(1);
+      floors.forEach(function(floor, index) {
+        elevator.goToFloor(index);
+      });
     });
   },
 
